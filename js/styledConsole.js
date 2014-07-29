@@ -11,7 +11,7 @@ function styledConsoleLog() {
     var endTagRe = /<\/span>/gi;
 
     var reResultArray;
-    argArray.push( arguments[0].replace( startTagRe, '%c' ).replace( endTagRe, '%c' ) );
+    argArray.push(arguments[0].replace(startTagRe, '%c').replace(endTagRe, '%c'));
     while ( (reResultArray = startTagRe.exec( arguments[0] )) !== null ) {
       argArray.push( reResultArray[2] );
       argArray.push('');
@@ -22,5 +22,5 @@ function styledConsoleLog() {
     }
   }
 
-  console.log.apply( console, argArray );
+  console.log.apply(console, argArray);
 }
